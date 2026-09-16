@@ -1,0 +1,7 @@
+
+TAMBAHKAN baris ini di akhir method run() pada database/seeders/DatabaseSeeder.php
+(setelah insert produk, SEBELUM penutup kurung kurawal method):
+
+    $this->call(TransaksiSeeder::class);
+
+Lalu jalankan ulang: php artisan migrate:fresh --seed
